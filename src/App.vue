@@ -19,6 +19,7 @@ import Filters from "./components/Filters.vue";
 import TodoList from "./components/TodoList.vue";
 import Header from "./components/Header.vue";
 import TagsManager from "./components/TagsManager.vue";
+import {defaultTags, fakeTodos} from './constants';
 
 export default {
   name: "App",
@@ -37,6 +38,12 @@ export default {
       },
       openTagsManager: false,
     };
+  },
+  created() {
+    if (!this.$store.state.isInitialized) {
+      let todos = process.env.NODE_ENV === 'production' ? [] : fakeTodos;
+      this.$store.commit('init', {todos, tags: defaultTags});
+    }
   },
   methods: {
     onAddNew() {

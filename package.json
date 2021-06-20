@@ -15,6 +15,7 @@
   "dependencies": {
     "buefy": "^0.9.7",
     "core-js": "^3.6.5",
+    "custom-electron-titlebar": "^3.2.7",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "randomcolor": "^0.6.2",

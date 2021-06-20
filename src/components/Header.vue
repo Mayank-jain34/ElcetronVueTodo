@@ -12,7 +12,7 @@
       />
     </div>
     <div class="column is-flex-grow-0">
-      <b-dropdown :value="selectedSetting"  role="menu">
+      <b-dropdown :value="selectedSetting"  role="menu" :close-on-click="true" :has-link="true">
         <template #trigger>
           <b-button icon-left="cog-outline" inverted outlined type="is-primary" />
         </template>

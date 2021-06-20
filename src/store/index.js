@@ -3,7 +3,6 @@ import Vuex from 'vuex'
 import { v4 as uuidV4} from 'uuid';
 import { createPersistedState } from "vuex-electron";
 import {intersection, sortBy, uniqBy} from "lodash";
-import {defaultTags, fakeTodos} from '../constants';
 
 // import Store from 'electron-store';
 // const store = new Store({ name: 'vuex' });
@@ -13,15 +12,21 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    todos: fakeTodos,
+    todos: [],
     filters: {
       status: 'all',
       priorities: [],
       tags: [],
     },
-    tags: defaultTags,
+    tags: [],
+    isInitialized: false,
   },
   mutations: {
+    init(state, {todos, tags}) {
+      state.todos = todos;
+      state.tags = tags;
+      state.isInitialized = true;
+    },
     // TODOs
     addTodo(state, todo) {
       const newTodo = {

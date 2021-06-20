@@ -1,18 +1,19 @@
 import { v4 as uuidV4 } from "uuid";
 import { generateRandomColor } from "./utils";
 
+// red, orange, yellow, green, blue, purple, pink
 export const defaultTags = [
-  {id: uuidV4(), color: generateRandomColor(), label: "Blocked",},
-  {id: uuidV4(), color: generateRandomColor(), label: "In Progress" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Question" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Help Wanted" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Pending" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Invalid" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Duplicate" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Bug" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Enhancement" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Long Term Goal" },
-  {id: uuidV4(), color: generateRandomColor(), label: "Short Term Goal" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'red'}), label: "Blocked",},
+  {id: uuidV4(), color: generateRandomColor({hue: 'orange'}), label: "In Progress" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'blue'}), label: "Question" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'red'}), label: "Help Wanted" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'orange'}), label: "Pending" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'red'}), label: "Invalid" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'purple'}), label: "Duplicate" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'red'}), label: "Bug" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'pink'}), label: "Enhancement" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'blue'}), label: "Long Term Goal" },
+  {id: uuidV4(), color: generateRandomColor({hue: 'blue'}), label: "Short Term Goal" },
 ];
 
 export const priorities = [
